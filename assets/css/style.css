@@ -1,0 +1,310 @@
+:root {
+  --fontTitles: "Ibarra Real Nova", serif;
+  --fontParrafos: "Roboto", sans-serif;
+  --colorTitles: #215d63; /*Tambien para el boton en movil del menu*/
+  --colorParrafos: #565f66;
+  --colorBotones: #a28951;
+  --z-index: 100;
+}
+
+/*GLOBALES UTILIDADES*/
+.container {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Menu */
+
+/*MOVIL MENU*/
+
+.nav__open{
+  position: fixed;
+  right: 10%;
+  bottom: 6%;
+  cursor: pointer;
+  background-color: #e0e4e8c6;
+  border-radius: 50%;
+  padding: 0.7rem;
+  z-index: 2;
+}
+.menu__close{
+  position: absolute;
+  bottom: 6%;
+  right: 22.6%;
+  cursor: pointer;
+  background-color: #e0e4e8c6;
+  border-radius: 50%;
+  padding: 0.7rem;
+}
+
+.menu{
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  right: -100%;
+  height: 100vh;
+  background-color: #215d63de;
+  width: 45%;
+  transition: .5s;
+}
+.menu__enlaces{
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1.7rem;
+}
+.menu__enlace{
+  color: #d5b061;
+  transition: all 0.6s ease-out;
+}
+
+
+.show{
+  right: 0;
+}
+.active{
+  color: #111;
+}
+/*Enlaces navegacion*/
+.menu__enlace{
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.menu__logo{
+  text-align: center;
+  padding-top: 2rem;
+}
+.menu__titulo{
+  font-weight: bold;
+  font-size: 3.5rem;
+  color: var(--colorTitles);
+  line-height: 1.18;
+}
+
+/*Seccion mensaje biblico*/
+.versiculo__bg{
+  background-image: url(../img/bg-textos.webp);
+  background-repeat: no-repeat;
+  background-position: top left;
+  height: 50vh;
+  margin-top: 2rem;
+  
+}
+.versiculo__textos{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.1rem;
+  text-align: center;
+  height: inherit;
+}
+.versiculo__texto{
+  font-size: 3rem;
+  color: var(--colorTitles);
+  line-height: 1.15;
+}
+.versiculo__span{
+  font-size: 2rem;
+  color: var(--colorParrafos);
+  font-weight: 500;
+}
+
+/*BIENVENIDOS*/
+.bienvenidos{
+  margin-top: 5rem;
+}
+.bienvenidos__titulo{
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: var(--colorTitles);
+  letter-spacing: 0.2rem;
+}
+.bienvenidos__cards{
+  text-align: center;
+}
+.bienvenidos__card{
+  margin-top: 2.7rem;
+}
+.bienvenidos__h3{
+  font-size: 2.55rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  color: var(--colorTitles);
+}
+.bienvenidos__texto{
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* BLOGS PARTE */
+.blog__card{
+  margin-bottom: 7rem;
+}
+.blog__title{
+  text-align: center;
+  font-size: 3.7rem;
+  font-weight: 600;
+  color: var(--colorTitles);
+  margin: 5rem 0rem 2rem 0rem;
+}
+.blog__span{
+  display: block;
+  color: var(--colorBotones);
+  margin-top: 1rem;
+  letter-spacing: 0.4rem;
+  font-weight: 500;
+}
+.blog__titulo{
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0.55rem 0;
+  color: var(--colorTitles);
+}
+.blog__texto{
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.blog__seguir{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 1.5rem 0;
+  background-color: var(--colorTitles);
+  border-radius: 0.25rem;
+  width: 18.5rem;
+}
+.svg__btn{
+  width: auto;
+}
+
+/*formulario suscribete*/
+.form{
+  background-image: url(../img/edwin-andrade-6liebVeAfrY-unsplash.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 43.5rem;
+}
+.form__things{
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.form__titulo{
+  color: #dee1e5;
+  font-size: 4rem;
+  text-align: center;
+  line-height: 1;
+  padding: 0rem 0.7rem;
+ }
+ .form__texto{
+  font-size: 1.8rem;
+  color: #c7c7d5;
+  text-align: center;
+ }
+ 
+
+ /*IMPUT CORREO*/
+.group{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.input {
+  width: 62.5%;
+  padding: 1.4rem 2.3rem 1.4rem 2.3rem;
+  line-height: 2.5rem;
+  border: 2px solid var(--colorBotones);
+  border-radius: 0.8rem;
+  outline: none;
+  background-color: transparent;
+  color: #c7c7d5;
+  transition: .3s ease;
+  font-size: 1.65rem;
+}
+ 
+.input::placeholder {
+  color: #c7c7d5;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--fontParrafos);
+}
+ 
+.input:focus, input:hover {
+  outline: none;
+  border-color: rgba(33,93,99,0.6);
+  background-color: #ae8b40d2;
+  box-shadow: 0 0 0 4px rgb(33 93 99 / 10%);
+}
+ 
+
+/*BOTON FORMULARIO*/
+.form__btn{
+  width: 62.5%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  padding: 2rem;
+  border: 0.2rem solid var(--colorBotones);
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  transition: .3s;
+  color: var(--colorBotones);
+  z-index: 1;
+ }
+ 
+.form__btn::before {
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: var(--colorBotones);
+  transition: .5s ease;
+  z-index: -1;
+ }
+ 
+.form__btn:hover::before {
+  width: 100%;
+ }
+ 
+.form__btn:hover {
+  color: #111;
+ }
+
+/*FOOTER*/
+.footer{
+  background-color: rgba(0, 0, 0, 0.931);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0rem;
+  gap: 0.5rem;
+}
+.footer__reservados{
+  font-size: 1.6rem;
+}
+.footer__reservados,.footer__nombre{
+  color: #c7c7d5;
+  font-family: var(--fontTitles);
+  font-weight: 500;
+}

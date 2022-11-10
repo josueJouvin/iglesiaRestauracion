@@ -1,0 +1,70 @@
+html {
+  box-sizing: border-box;
+  font-size: 65.5%;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.6rem; /*10 px = 1rem*/
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+a { 
+  text-decoration: none;
+  font-family: var(--fontParrafos);
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+a:hover{
+  opacity: 0.75;
+}
+
+span{
+  font-family: var(--fontParrafos);
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fontTitles);
+}
+
+p {
+  font-family: var(--fontParrafos);
+  color: var(--colorParrafos);
+}
+
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+  object-position: center center;
+}
+
+svg {
+    width: 100%;
+    display: block;
+}
